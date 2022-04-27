@@ -1,0 +1,26 @@
+body {
+    
+    background-color: #22262D;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div > img {
+    width: 200px;
+}
+div > p {
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.text-center {
+    text-align: center !important;
+}

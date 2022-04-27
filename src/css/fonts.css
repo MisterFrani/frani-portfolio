@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url("./../fonts/Outfit-Light.woff2"), url("./../fonts/Outfit-Light.woff");
+  }
+  
+  @font-face {
+    font-family: 'Outfit';
+    src: url("./../fonts/Outfit-SemiBold.woff2"),
+      url("./../fonts/Outfit-SemiBold.woff");
+    font-weight: bold;
+  }
+
+body {
+    font-family: 'Outfit', sans-serif;
+
+  }
