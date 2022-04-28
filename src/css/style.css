@@ -1,26 +1,184 @@
-body {
-    
-    background-color: #22262D;
-}
+/* style.css */
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+/* copyright 2022 MisterFrani */
+
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {list-style: none;}
+a { 
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+ }
+ button {
+     border: none;
+     background: none;
+     font: inherit;
+     cursor: pointer;
+ }
+ html {
+     scroll-behavior: smooth;
+ }
+ img, span, svg { display: block;}
+
+ /* Main */
+
+body {transition: all 0.2s ease-in-out;}
+
+.toggle-btn-mode {
+    transition: transform 0.3s ease-in-out;
+    z-index: 11;
+}
+.toggle-btn-mode.active {transform: translateY(-52px);}
+ion-icon {font-size: 32px;}
+ .container {
+     max-width: 1280px;
+     margin: auto;
+ }
+  /* Header */
+
+  header {
+      position: fixed;
+      top:  0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+  }
+  header #logo {width: 45px;}
+  .navbar {
+      display:         flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px;
+  }
+  .navbar__nav {
+      position: fixed;
+      top:   90px;
+      left:  30px;
+      right: 30px;
+      display:        flex;
+      flex-direction: column;
+      align-items:    center;
+      gap: 20px;
+      padding: 40px 0;
+      border-radius: 8px;
+      z-index: -1;
+      opacity: 0;
+      transition: 0.5s ease;
+      pointer-events:  none;
+  }
+.navbar a {display: block;}
+.navbar__nav.active {
+    top: (60px + 20px);
+    opacity: 1;
+    pointer-events: all;
+}
+/* text style */
+header a {
+     background-repeat: no-repeat;
+     background-size: 0% 100%;
+     background-position-x: left;
+     transition: background-size 300ms;
+}
+header a:hover {
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+.not-hover {background: initial !important;}
+.main {
     display: flex;
-    align-items: center;
+    margin-top: 120px;
+    padding: 0 25px;
+}
+
+.about-me__left {
+    align-items: flex-start;
+    width: 100%; 
+    /* background-color: aquamarine; */
+}
+.name-colored {
+    font-weight: 600;
+}
+.about-me__left p {
+    font-size: 32px;
+}
+
+.about-me__right {display: none;}
+.about-me__right > ion-icon  {
+    font-size: 48px;
+}
+.skills {
+    padding: 48px 25px;
+    /* background-color: brown; */
+}
+.skills__items {
+    display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    overflow-y: hidden;
+    scrollbar-width: thin;
 }
 
-div > img {
-    width: 200px;
+.skills__items > img {
+    width: 28px;
 }
-div > p {
-    color: #ffffff;
-    font-size: 3rem;
+.main__title {
+    display: flex;
+    justify-content: center;
+    /* background-color: brown; */
+    padding: 48px 0;
 }
+.main__title > h2 {
+    align-items: center;
+}
+/* Responsive */
 
-.text-center {
-    text-align: center !important;
+/* for tablet */
+@media (min-width: 768px) { 
+    .skills__items > img {
+        width: 52px;
+    }
+    .about-me__left p {
+        font-size: 48px;
+    }
+    .about-me__right {
+        display: block;
+        align-items: flex-end;
+        width: 100%; 
+    }
+}
+/* for large tablet */
+
+@media (min-width: 1024px) {
+    /* header */
+    header {position: static;}
+    .navbar{ padding: 40 20px;}
+    .navbar__toggle-btn { display: none;}
+    .navbar__nav {
+        position: static;
+        padding: 0;
+        z-index: 0;
+        flex-direction: row;
+        gap: 30px;
+        opacity: 1;
+        pointer-events: all;
+    }
+    .about-me__right > ion-icon  {
+        font-size: 280px;
+        align-items: center;
+    }
+}
+/* for laptop */
+@media (min-width: 1200px) {
+
 }
