@@ -4,13 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#22262D"
+      media="(prefers-color-scheme: dark)"
+    />
     <title>Frani BIZI | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./src/css/theme.css" />
     <link rel="stylesheet" href="./src/css/fonts.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
 
-    
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -34,71 +49,148 @@
   <body>
     <!-- main container -->
     <div class="container">
-        <!-- header section -->
-        <header>
-            <nav class="navbar">
-                <a href="https://www.franibizi.com/" class="not-hover">
-                    <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 665.67 466.17"><defs><style>.cls-1{fill:#E84855;}</style></defs><g id="Calque_2" data-name="Calque 2"><rect class="cls-1" y="3.55" width="132.96" height="459.08"/><polygon class="cls-1" points="147.11 176.69 147.11 176.69 147.11 3.55 294.19 3.55 147.11 176.69"/><rect class="cls-1" x="147.11" y="188.63" width="102.62" height="88.9"/><rect class="cls-1" x="355.03" width="156.54" height="466.17"/><ellipse class="cls-1" cx="511.57" cy="338.89" rx="154.1" ry="127.28"/><ellipse class="cls-1" cx="511.57" cy="127.28" rx="154.1" ry="127.28"/></g></svg>
-                </a>
-                <button class="navbar__toggle-btn">
-                    <ion-icon name="grid-outline"></ion-icon>
-                </button>
-                <ul class="navbar__nav">
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="mailto:bizifrani@icloud.com">Contact</a></li>
-                    <li><a href="src/img/Cv Frani BIZI.pdf" target="_blank">Curriculum vitae</a></li>
-                    <li><a href="https://github.com/MisterFrani/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-                    <li><a href="https://www.linkedin.com/in/frani-bizi/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                </ul>
-                <button onclick="myFunction()" id="toggle-mode" class="toggle-btn-mode yello">
-                    <ion-icon name="moon-outline"></ion-icon>
-                </button>
-            </nav>
-        </header>
-        <!-- main section -->
-        <div class="main">
-            <div class="about-me__left">
-                <p>
-                    Salut, je suis
-                   <span class="name-colored">Frani Bizi</span> Développeur Front-end
-                </p>
-            </div>
-            <div class="about-me__right">
-                <ion-icon name="code-slash-outline"></ion-icon>
-            </div>
+      <!-- header section -->
+      <header>
+        <nav class="navbar">
+          <a href="https://www.franibizi.com/" class="not-hover">
+            <svg
+              id="logo"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 665.67 466.17"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #e84855;
+                  }
+                </style>
+              </defs>
+              <g id="Calque_2" data-name="Calque 2">
+                <rect class="cls-1" y="3.55" width="132.96" height="459.08" />
+                <polygon
+                  class="cls-1"
+                  points="147.11 176.69 147.11 176.69 147.11 3.55 294.19 3.55 147.11 176.69"
+                />
+                <rect
+                  class="cls-1"
+                  x="147.11"
+                  y="188.63"
+                  width="102.62"
+                  height="88.9"
+                />
+                <rect class="cls-1" x="355.03" width="156.54" height="466.17" />
+                <ellipse
+                  class="cls-1"
+                  cx="511.57"
+                  cy="338.89"
+                  rx="154.1"
+                  ry="127.28"
+                />
+                <ellipse
+                  class="cls-1"
+                  cx="511.57"
+                  cy="127.28"
+                  rx="154.1"
+                  ry="127.28"
+                />
+              </g>
+            </svg>
+          </a>
+          <button class="navbar__toggle-btn">
+            <ion-icon name="grid-outline"></ion-icon>
+          </button>
+          <ul class="navbar__nav">
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="mailto:bizifrani@icloud.com">Contact</a></li>
+            <li>
+              <a href="src/img/Cv Frani BIZI.pdf" target="_blank"
+                >Curriculum vitae</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/MisterFrani/" target="_blank"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/frani-bizi/" target="_blank"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <button
+            onclick="myFunction()"
+            id="toggle-mode"
+            class="toggle-btn-mode yello"
+          >
+            <ion-icon name="moon-outline"></ion-icon>
+          </button>
+        </nav>
+      </header>
+      <!-- main section -->
+      <div class="main">
+        <div class="about-me__left">
+          <p>
+            Salut, je suis
+            <span class="name-colored">Frani Bizi</span> Développeur Front-end
+          </p>
         </div>
-        <div class="skills">
-            <div class="main__title">
-                <h2> Mes compétences</h2>
-            </div>
-            <div class="skills__items">
-
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-          
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-
-
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-          
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-          
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-
-            <ion-icon class="" name="logo-github"></ion-icon>
-          
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-              
-            </div>
+        <div class="about-me__right">
+          <ion-icon name="code-slash-outline"></ion-icon>
         </div>
+      </div>
+      <div class="skills">
+        <div class="main__title">
+          <h2>Mes compétences</h2>
+        </div>
+        <div class="skills__items">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+          />
 
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+          />
+
+          <ion-icon class="" name="logo-github"></ion-icon>
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+          />
+        </div>
+      </div>
     </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
