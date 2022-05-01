@@ -51,7 +51,7 @@ a {
     transition: transform 0.3s ease;
     z-index: 11;
 }
-.toggle-btn-mode.active {transform: translateY(-52px);}
+.toggle-btn-mode.active {transform: translateY(-180px);}
 ion-icon {font-size: var(--size-36);}
 /* Container */
  .container {
