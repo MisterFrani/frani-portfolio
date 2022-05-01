@@ -51,3 +51,8 @@ const $navBarToggleFunc = function () {
     $navbarNav.classList.toggle("active");
 }
 $navbarToggleBtn.addEventListener("click", $navBarToggleFunc);
+
+document.querySelectorAll(".nav-link").forEach(e => e.addEventListener("click", () => {
+  $navbarToggleBtn.classList.remove("active");
+  $navbarNav.classList.remove("active");
+} ))

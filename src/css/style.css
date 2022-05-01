@@ -28,46 +28,61 @@ a {
      scroll-behavior: smooth;
  }
  img, span, svg { display: block;}
+/* VARIABLE */
 
- /* Main */
-
-body {transition: all 0.2s ease-in-out;}
-
+:root {
+    /* size */
+    --size-0: 0rem;
+    --size-10: .625rem;
+    --size-20: 1.25rem;
+    --size-24: 1.5rem;
+    --size-26: 1.625rem;
+    --size-32: 2rem;
+    --size-36: 30px;
+    --size-45: 2.8125rem;
+    --size-46: 2.875rem;
+    --size-48: 3rem;
+    --size-70: 4.375rem;
+    --size-100-p: 100%;
+    --size-118: 7.375rem
+}
+ /* Toggle mode */
 .toggle-btn-mode {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
     z-index: 11;
 }
 .toggle-btn-mode.active {transform: translateY(-52px);}
-ion-icon {font-size: 32px;}
+ion-icon {font-size: var(--size-36);}
+/* Container */
  .container {
      max-width: 1280px;
      margin: auto;
  }
+ .container-fuild {width: var(--size-100-p);}
   /* Header */
-
   header {
       position: fixed;
       top:  0;
       left: 0;
-      width: 100%;
-      z-index: 10;
+      width: var(--size-100-p);
+      z-index: 100;
   }
-  header #logo {width: 45px;}
+  header #logo {width: var(--size-45);}
   .navbar {
       display:         flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 20px;
+      padding: var(--size-24);
   }
   .navbar__nav {
       position: fixed;
-      top:   90px;
+      top:   70px;
       left:  30px;
       right: 30px;
       display:        flex;
       flex-direction: column;
       align-items:    center;
-      gap: 20px;
+      gap: var(--size-20);
       padding: 40px 0;
       border-radius: 8px;
       z-index: -1;
@@ -82,87 +97,128 @@ ion-icon {font-size: 32px;}
     pointer-events: all;
 }
 /* text style */
-header a {
+.link__bar {
      background-repeat: no-repeat;
      background-size: 0% 100%;
      background-position-x: left;
      transition: background-size 300ms;
 }
-header a:hover {
+.link__bar:hover {
     background-size: 100% 100%;
     background-position-x: left;
 }
-.not-hover {background: initial !important;}
 .main {
     display: flex;
-    margin-top: 120px;
-    padding: 0 25px;
+    flex-wrap: nowrap;
+    margin-top: var(--size-118);
+    padding: 0 var(--size-24);
 }
-
-.about-me__left {
+.about-me {
     align-items: flex-start;
-    width: 100%; 
-    /* background-color: aquamarine; */
+    width: var(--size-100-p); 
 }
 .name-colored {
     font-weight: 600;
 }
-.about-me__left p {
-    font-size: 32px;
-}
-
-.about-me__right {display: none;}
-.about-me__right > ion-icon  {
-    font-size: 48px;
+.about-me h1 {
+    font-size: var(--size-46);
 }
 .skills {
-    padding: 48px 25px;
-    /* background-color: brown; */
+    padding: 0 15px; 
+    margin-top: 95px;
+    padding-bottom: 78px;
 }
 .skills__items {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    gap: 12px;
-    overflow-y: hidden;
-    scrollbar-width: thin;
+    flex-wrap: wrap;
+    gap: 12px; 
 }
-
-.skills__items > img {
-    width: 28px;
+.skills__items > img {width: var(--size-48);}
+/* Project */
+.project {
+    padding: 0 24px;
+    padding-bottom: 78px;
+    margin-top: 95px;
 }
-.main__title {
+.project__card-group  {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+.project__card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition:  transform 0.3s ease-in-out;
+}
+.project__card:hover { 
+    transform: scale(1.03);
+}
+.project__card .project__card-head {height: 200px;} 
+.project__card  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project__card .project__card-body {
     display: flex;
     justify-content: center;
-    /* background-color: brown; */
-    padding: 48px 0;
+    gap: 35px;
+    padding: 10px;
+    text-align: center;
 }
-.main__title > h2 {
+.section__title {
+    font-size: var(--size-32);
+    margin-bottom: var(--size-118);
+    text-align: center;
+}
+/* contact */
+.contact {
+    text-align: center;
+    padding: 58px 24px;
+}
+.block {
+    margin-top: 70px;
+}
+.contact ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
+    gap: 30px;
 }
+.contact-btn {
+    padding: 20px 45px;
+    border-radius: 8px;
+}
+/* footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
+
 /* Responsive */
 
 /* for tablet */
 @media (min-width: 768px) { 
+    .skills {
+        padding: 70px 25px;}
+    .about-me h1 {
+        font-size: 86px
+    }
     .skills__items > img {
-        width: 52px;
+        width: 68px;
     }
-    .about-me__left p {
-        font-size: 48px;
-    }
-    .about-me__right {
-        display: block;
-        align-items: flex-end;
-        width: 100%; 
-    }
+    .project__card-group {grid-template-columns: repeat(2, 1fr);}
+    footer {font-size: 18px;}
 }
 /* for large tablet */
 
 @media (min-width: 1024px) {
     /* header */
-    header {position: static;}
-    .navbar{ padding: 40 20px;}
+    .navbar{ padding: 40px 20px;}
     .navbar__toggle-btn { display: none;}
     .navbar__nav {
         position: static;
@@ -173,12 +229,5 @@ header a:hover {
         opacity: 1;
         pointer-events: all;
     }
-    .about-me__right > ion-icon  {
-        font-size: 280px;
-        align-items: center;
-    }
-}
-/* for laptop */
-@media (min-width: 1200px) {
-
+    .project__card-group {grid-template-columns: repeat(3, 1fr);}
 }

@@ -15,6 +15,10 @@
       media="(prefers-color-scheme: dark)"
     />
     <title>Frani BIZI | Portfolio</title>
+    <meta
+      name="description"
+      content="Salut je suis Frani BIZI, développeur Front-end"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -25,34 +29,35 @@
     <link rel="stylesheet" href="./src/css/theme.css" />
     <link rel="stylesheet" href="./src/css/fonts.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./favicon_io/apple-touch-icon.png"
+      href="./src/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./favicon_io/favicon-32x32.png"
+      href="./src/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./favicon_io/favicon-16x16.png"
+      href="./src/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
     <script src="src/js/index.js" defer></script>
   </head>
   <body>
-    <!-- main container -->
+    <!-- container -->
     <div class="container">
       <!-- header section -->
       <header>
         <nav class="navbar">
-          <a href="https://www.franibizi.com/" class="not-hover">
+          <a href="https://www.franibizi.com/">
             <svg
               id="logo"
               xmlns="http://www.w3.org/2000/svg"
@@ -100,20 +105,33 @@
             <ion-icon name="grid-outline"></ion-icon>
           </button>
           <ul class="navbar__nav">
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="mailto:bizifrani@icloud.com">Contact</a></li>
+            <li><a href="#projets" class="link__bar nav-link">Projets</a></li>
             <li>
-              <a href="src/img/Cv Frani BIZI.pdf" target="_blank"
+              <a href="mailto:bizifrani@icloud.com" class="link__bar"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="src/img/Cv Frani BIZI.pdf"
+                target="_blank"
+                class="link__bar nav-link"
                 >Curriculum vitae</a
               >
             </li>
             <li>
-              <a href="https://github.com/MisterFrani/" target="_blank"
+              <a
+                href="https://github.com/MisterFrani/"
+                target="_blank"
+                class="link__bar nav-link"
                 ><ion-icon name="logo-github"></ion-icon
               ></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/frani-bizi/" target="_blank"
+              <a
+                href="https://www.linkedin.com/in/frani-bizi/"
+                target="_blank"
+                class="link__bar nav-link"
                 ><ion-icon name="logo-linkedin"></ion-icon
               ></a>
             </li>
@@ -127,23 +145,23 @@
           </button>
         </nav>
       </header>
-      <!-- main section -->
-      <div class="main">
-        <div class="about-me__left">
-          <p>
+
+      <!-- about me section -->
+      <section class="main">
+        <div class="about-me">
+          <h1>
             Salut, je suis
             <span class="name-colored">Frani Bizi</span> Développeur Front-end
-          </p>
+        </h1>
         </div>
-        <div class="about-me__right">
-          <ion-icon name="code-slash-outline"></ion-icon>
-        </div>
-      </div>
+      </section>
+
+      <!-- Skills section -->
       <div class="skills">
-        <div class="main__title">
-          <h2>Mes compétences</h2>
-        </div>
-        <div class="skills__items">
+        <h2 class="section__title" data-aos="fade-up" data-aos-duration="3000">
+          Compétences
+        </h2>
+        <div class="skills__items" data-aos="fade-up" data-aos-duration="4000">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
           />
@@ -169,21 +187,126 @@
           />
 
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg"
           />
 
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
           />
 
-          <ion-icon class="" name="logo-github"></ion-icon>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+          />
 
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
           />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+          />
+
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maya/maya-original.svg"
+          />
         </div>
       </div>
+      <!-- Projects section -->
+      <section class="project" id="projets">
+        <h2 class="section__title" data-aos="fade-up" data-aos-duration="3000">
+          Mes Projets
+        </h2>
+        <div
+          class="project__card-group"
+          data-aos="fade-up"
+          data-aos-duration="4000"
+        >
+          <article class="project__card">
+            <div class="project__card-head">
+              <img src="src/img/yapple.png" alt="capture d'écran yapple" class="card-img" />
+            </div>
+            <div class="project__card-body">
+              <a href="https://github.com/MisterFrani/yapple" target="_blank" class="link__bar"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a href="https://yapple.netlify.app/" target="_blank"
+                ><ion-icon name="link-outline" class="link__bar"></ion-icon
+              ></a>
+            </div>
+          </article>
+
+          <article class="project__card">
+            <div class="project__card-head">
+              <img src="src/img/citation.png" alt="capture d'écran citation app" class="card-img" />
+            </div>
+            <div class="project__card-body">
+              <a href="https://github.com/MisterFrani/citation" target="_blank" class="link__bar"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a href="https://citation216.netlify.app/" target="_blank"
+                ><ion-icon name="link-outline" class="link__bar"></ion-icon
+              ></a>
+            </div>
+          </article>
+
+          <article class="project__card">
+            <div class="project__card-head">
+              <img src="src/img/cinetic.png" alt="capture d'écran cinetic app" class="card-img" />
+            </div>
+            <div class="project__card-body">
+              <a href="https://github.com/MisterFrani/cinetic" target="_blank" class="link__bar"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a href="http://cinetic.rf.gd/" target="_blank"
+                ><ion-icon name="link-outline" class="link__bar"></ion-icon
+              ></a>
+            </div>
+          </article>
+        </div>
+      </section>
     </div>
+
+    <div class="container-fuild">
+      <section class="contact">
+        <div class="block">
+          <a href="mailto:bizifrani@icloud.com" class="contact-btn"
+            >Contactez-moi</a
+          >
+        </div>
+        <div>
+          <ul class="block">
+            <li>
+              <a
+                href="https://github.com/MisterFrani/"
+                target="_blank"
+                class="link__bar"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/frani-bizi/"
+                target="_blank"
+                class="link__bar"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer>
+        <p>Conçu et développé par Frani BIZI &copy;2022</p>
+      </footer>
+    </div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -192,5 +315,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
