@@ -176,17 +176,17 @@ ion-icon {font-size: var(--size-36);}
 /* contact */
 .contact {
     text-align: center;
-    padding: 58px 24px;
+    padding: 40px 0;
 }
 .block {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 .contact ul {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 30px;
+    gap: 8px;
 }
 .contact-btn {
     padding: 20px 45px;
@@ -195,7 +195,7 @@ ion-icon {font-size: var(--size-36);}
 /* footer */
 footer {
     text-align: center;
-    padding: 24px;
+    padding: 8px;
     font-size: 14px;
 }
 
